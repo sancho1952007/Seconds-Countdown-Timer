@@ -1,0 +1,105 @@
+*{
+    outline: none;
+}
+
+
+body{
+    background-color: #242424;
+}
+
+
+.timer{
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 97px;
+}
+
+
+
+.box{
+    background-color: #00d9ff;
+    cursor: default;
+    width: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 350px;
+    border: 1px solid lightblue;
+    border-radius: 10px;
+}
+
+
+
+.start{
+    width: 180px;
+    position: absolute;
+    top: 85%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    font-family: 'Roboto Mono', monospace;
+    border: 2px solid lightgreen;
+    background-color: lightgreen;
+    border-radius: 10px;
+    transition: all .50s linear;
+}
+.start:hover{
+    border-radius: 20px;
+}
+
+
+.stop{
+    width: 180px;
+    position: absolute;
+    top: 85%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    font-family: 'Roboto Mono', monospace;
+    border: 2px solid lightgreen;
+    background-color: lightgreen;
+    border-radius: 10px;
+    transition: all .50s linear;
+}
+.stop:hover{
+    border-radius: 20px;
+}
+
+
+
+.reset{
+    width: 180px;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    font-family: 'Roboto Mono', monospace;
+    border: 2px solid lightgreen;
+    background-color: lightgreen;
+    border-radius: 10px;
+    transition: all .50s linear;
+}
+.reset:hover{
+    border-radius: 20px;
+}
+
+
+
+.me{
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.swal-text, .swal-title{
+    font-family: monospace;
+}
+
+button{
+    cursor: pointer;
+}
