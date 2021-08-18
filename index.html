@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <link rel='stylesheet' href="style.css">
+        <title>Countdown Timer</title>
+    </head>
+    <body onselectstart='return false'>
+        <div class='box'>
+            <h1 class='timer'>Loading Timer...</h1>
+            <button class='start' onclick="start()">Start</button>
+            <button class='reset' onclick="reset()">Reset</button>
+            <button class='stop' onclick="stop()">Stop</button>
+        </div>
+    </body>
+</html>
+
+<script>
+document.onload=load()
+var count=0;
+const wrapper = document.createElement('div');
+wrapper.setAttribute('class', 'me')
+  wrapper.innerHTML = "<a href='https://www.youtube.com/channel/UCA_3t4pPc9GRIFiP86kRD2Q'>Learn To Code!</a><br><br><a href='https://github.com/sancho1952007'>Follow Me on Github!</a>";
+  swal({
+    title: "See My Other Codes:",
+    content: wrapper, 
+    icon: "https://image0.flaticon.com/icons/png/128/1336/1336494.png"
+      });
+function load(){
+    document.querySelector('.timer').innerHTML="00";
+}
+
+function start(){
+    if (count==0){
+        document.querySelector('.timer').innerHTML="00";
+    }
+    else if (count<10){
+        document.querySelector('.timer').innerHTML="0"+count;
+    }
+    else{
+        document.querySelector('.timer').innerHTML=count;
+    }
+    count+=1;
+    time = setTimeout(start, 1000)
+}
+
+function stop(){
+    clearTimeout(time)
+    document.querySelector('.start').innerHTML="Continue";
+}
+
+function reset(){
+    try{
+        clearTimeout(time);
+        document.querySelector('.start').innerHTML="Start";
+        document.querySelector('.timer').innerHTML="00";
+        count=0;
+    }
+    catch{}
+}
+</script>
